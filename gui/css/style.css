@@ -1,0 +1,48 @@
+body {
+	text-align: center;
+	background: #ececec;
+}
+#centerform {
+	background-color: #e31b23;
+	width: 300px;
+	margin: 25% auto;
+	content: "";
+	display: table;
+	clear: both;
+	padding-bottom: 15px;
+	border-radius: 1px;
+	border: 5px solid #FFFFFF;
+	color: #FFFFFF;
+}
+#centerform h1{
+	font-size: 22px;
+}
+#passwordError,#usernameError,
+#confirmError,#emailError {
+	height: 16px;
+	margin-bottom: 2px;
+}
+.fields {
+	background: rgb(250, 255, 189);
+}
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+#register {
+	float: left;
+	margin-top: 5px;
+}
+#submit {
+	float: right;
+	margin-top: 5px;
+}
+#register a:link,
+#register a:visited,
+#register a:hover,
+#register a:active {
+	color: #000000;
+	text-decoration: none;
+}
