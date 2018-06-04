@@ -1,3 +1,22 @@
+<?php
+	if (session_id() === "")
+	{
+		session_start();
+	}
+	require_once($_SERVER["DOCUMENT_ROOT"] .  "/Common_project/bl/bl_classes/user/loginbl.class.php");
+	
+	$loginBL = new LoginBL();
+	$loginBL->CheckUserSessionData("login");
+	
+	if (ISSET($_POST["username"],$_POST["password"]))
+	{
+		$test = $loginBL->LoginUser();
+		if ($test == null)
+		{
+			echo "<h1 style='color:red'>Greska!</h1>";
+		}
+	}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,22 +36,22 @@
 						<label>Korisničko ime</label>
 					</div>
 					<div>
-						<input type="text" id="username" class="fields">
+						<input type="text" id="username" name="username" class="fields">
 						<div id="usernameError"></div>
 					</div>
 					<div>
 						<label>Lozinka</label>
 					</div>
 					<div>
-						<input type="password" id="password" class="fields">
+						<input type="password" id="password" name="password" class="fields">
 						<div id="passwordError"></div>
 					</div>
-					<div id="register">
-						<button type="button" id="register" value="register"><a href="register.php">Registruj se</a>
+					<div class="register">
+						<button type="button" name="register" value="register"><a href="register.php">Registruj se</a>
 						</button>
 					</div>
 					<div id="submit">
-						<input type="submit" id="submit" value="Prijavi se"/>
+						<input type="submit" id="submit" name="submit" value="Prijavi se"/>
 					</div>
 			</form>
 		</div>

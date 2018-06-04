@@ -31,18 +31,18 @@ form {
     margin-right: auto;
     text-align: left;
 }
-#register {
+.register {
 	float: left;
-	margin-top: 5px;
+	margin-top: 5.5px;
 }
 #submit {
 	float: right;
-	margin-top: 5px;
+	margin-top: 3px;
 }
-#register a:link,
-#register a:visited,
-#register a:hover,
-#register a:active {
+.register a:link,
+.register a:visited,
+.register a:hover,
+.register a:active {
 	color: #000000;
 	text-decoration: none;
 }

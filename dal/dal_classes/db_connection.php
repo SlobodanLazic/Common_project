@@ -1,11 +1,14 @@
 <?php
+
+	require_once($_SERVER["DOCUMENT_ROOT"] . "/Common_project/dal/util.php");
+	
 	class DBConn
 	{
 		private static $conn;
 		
 		private static function setConnection()
 		{
-			self::$conn = new mysqli("localhost", "root", "", "systemdb");
+			self::$conn = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 		}
 		
 		private static function closeConnection()
@@ -48,6 +51,19 @@
 			self::closeConnection();
 			
 			return isset($resultArray) ? $resultArray : null;
+		}
+		
+		public static function Update($query)
+		{
+			self::setConnection();
+			
+			$result = self::$conn->query($query);
+			
+			$affectedRows = $result->affected_rows;
+			
+			self::closeConnection();
+			
+			return $affectedRows;
 		}
 	}
 ?>
