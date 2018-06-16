@@ -11,12 +11,12 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-		<title>Home</title>
+		<title>Admin</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 		<div id="centerform">
-			<h1>Home</h1>
+			<h1>Admin</h1>
 			<form method="POST">
 				<div>
 					Ulogovan!!!

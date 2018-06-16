@@ -17,11 +17,11 @@
 			{
 				$userDAL = new UserDAL();
 				$user = $userDAL->GetUser($username, $password);
-				if ($user != null)
+				if ($user != null && $username == "admin" && $password = "admin")
 				{
 					$userDAL->UpdateLastLoginTime($user->GetID_USER());
 					$this->SetUserObjectToSession($user);
-					header("Location:home.php");
+					header("Location:admin.php");
 					exit;
 				}
 				return $user;
@@ -51,9 +51,9 @@
 				}
 				$_SESSION["timeout"] = time();
 				
-				if ($current_page == "login")
+				if ($current_page == "login" && $_SESSION["user"] == "admin")
 				{
-					header("Location:home.php");
+					header("Location:admin.php");
 					exit;
 				}
 			}
