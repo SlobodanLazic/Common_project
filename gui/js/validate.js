@@ -15,8 +15,10 @@ $(document).ready(function(){
 			$("#" + id + "Error").text("* Obavezno polje!");
 		}
 	}
-	allInputs = $("input");
+	
+	var allInputs = $("input");
 	$(allInputs).blur(checkFields);
 	$("form").submit(checkFields);
-	
 });
+
+

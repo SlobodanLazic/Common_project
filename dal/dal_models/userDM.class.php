@@ -101,26 +101,18 @@
 			return $this->USER_STATUS;
 		}
 		
-		public function SetUser($ID_USER,
-		                        $IME,
+		public function SetUser($IME,
 		                        $PREZIME,
 		                        $EMAIL,
 		                        $USERNAME,
-		                        $PASSWORD,
-		                        $POSLEDNJE_LOGOVANJE_KORISNIKA,
-		                        $FOTO_NAZIV,
-		                        $USER_STATUS
+		                        $PASSWORD
 		)
 		{
-			$this->SetID_USER($ID_USER);
 			$this->SetIME($IME);
 			$this->SetPREZIME($PREZIME);
 			$this->SetEMAIL($EMAIL);
 			$this->SetUSERNAME($USERNAME);
 			$this->SetPASSWORD($PASSWORD);
-			$this->SetPOSLEDNJE_LOGOVANJE_KORISNIKA($POSLEDNJE_LOGOVANJE_KORISNIKA);
-			$this->SetFOTO_NAZIV($FOTO_NAZIV);
-			$this->SetUSER_STATUS($USER_STATUS);	
 		}
 	}
 ?>

@@ -44,6 +44,8 @@
 			return isset($user) ? $user : null;
 		}
 		
+		public function SetUser()
+		
 		public function UpdateLastLoginTime($userID)
 		{
 			$query = sprintf("

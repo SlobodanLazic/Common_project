@@ -17,13 +17,17 @@ body {
 #centerform h1{
 	font-size: 22px;
 }
-#passwordError,#usernameError,
-#confirmError,#emailError {
+#firstNameError,#lastNameError,#passwordError,#usernameError,
+#confirmError,#emailError,#departmentError,#yearError {
 	height: 16px;
 	margin-bottom: 2px;
 }
 .fields {
 	background: rgb(250, 255, 189);
+	color: #000000;
+}
+option {
+	color: black;
 }
 form {
     display: inline-block;

@@ -4,15 +4,15 @@
 	
 	class DepartmentDAL
 	{
-		public GetDepartments()
+		public function GetDepartments()
 		{
 			$query = sprintf("
-								SELECT s.NAZIV_SMERA
+								SELECT s.ID_SMER,s.NAZIV_SMERA
 								FROM SMER s
  							");
 			$departmentsResult = DBConn::Select($query);
 			
-			if ($departmentsResult != null && is_array($departmentResult) && count($departmentResult) > 0)
+			if ($departmentsResult != null && is_array($departmentsResult) && count($departmentsResult) > 0)
 			{
 				foreach($departmentsResult as $departmentResult)
 				{

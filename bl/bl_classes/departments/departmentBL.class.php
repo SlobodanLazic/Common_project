@@ -8,9 +8,9 @@
 		public function GetDepartments()
 		{
 			$DepartmentDAL = new DepartmentDAL();
-			$departmentDM = $DepartmentDAL->GetDepartments();
+			$departmentsDM = $DepartmentDAL->GetDepartments();
 			
-			$departments = MapDepartmentsDM2BM($departmentsDM);
+			$departments = $this->MapDepartmentsDM2BM($departmentsDM);
 			
 			return $departments;
 		}
@@ -21,8 +21,8 @@
 			{
 				foreach($departmentsDM as $departmentDM)
 				{
-					$departmentBM = new departmentDM();
-					$departmentBM->SetDepartment(
+					$departmentBM = new departmentBM();
+					$departmentBM->SetDepartments(
 													$departmentDM->GetID_SMER(),
 													$departmentDM->GetNAZIV_SMERA()
 												);

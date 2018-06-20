@@ -19,7 +19,7 @@
 			return $this->ID_SMER;
 		}
 		
-		public function GetNAZIV_SMERA($NAZIV_SMERA)
+		public function GetNAZIV_SMERA()
 		{
 			return $this->NAZIV_SMERA;
 		}
