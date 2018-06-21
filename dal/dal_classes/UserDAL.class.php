@@ -44,7 +44,48 @@
 			return isset($user) ? $user : null;
 		}
 		
-		public function SetUser()
+		public function SetUser($user)
+		{
+			$query = sprintf("
+							INSERT INTO USER (IME, PREZIME, EMAIL, USERNAME, PASSWORD)
+							VALUES ('%s', '%s', '%s', '%s', '%s')",
+							$user->GetIME(),$user->GetPREZIME(),$user->GetEMAIL(),$user->GetUSERNAME(),$user->GetPASSWORD()
+							);
+			$resultArray = DBConn::Insert($query);
+			
+			$id = -1;
+			if (ISSET($resultArray) && $resultArray != null)
+			{
+				if (count($resultArray) == 1)
+				{
+					$id = $resultArray["insert_id"];
+				}
+				else if (count($resultArray) == 2)
+				{
+					echo $resultArray["error"];
+					exit;
+					/*
+					$filename = "../dal/errorlog.txt";
+					
+					function SetError($errno, $errMessage, $errFile, $errLine, $errContext)
+					{
+						$handle = fopen($filename, "a+");
+						echo $resultArray["error"];
+						if ($handle !== false)
+						{
+							@$written = fwrite($handle, "Error number:$errno, ErrorMessage: $errMessage, ErrorFile: $errFile, ErrorLine:$errLine, ErrorFile:$errContext");
+							if(file_exists($filename))
+							{
+								fclose($handle);
+							}
+						}						
+					}
+					set_error_handler("SetError");*/
+				}
+			}
+			
+			return $id;
+		}
 		
 		public function UpdateLastLoginTime($userID)
 		{

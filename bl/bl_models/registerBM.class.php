@@ -12,42 +12,42 @@
 		
 		public function GetfirstName()
 		{
-			return this->$firstName;
+			return $this->$firstName;
 		}
 		
 		public function GetlastName()
 		{
-			return this->$lastName;
+			return $this->$lastName;
 		}
 		
 		public function Getemail()
 		{
-			return this->$email;
+			return $this->$email;
 		}
 		
 		public function Getusername()
 		{
-			return this->$username;
+			return $this->$username;
 		}
 		
 		public function Getpassword()
 		{
-			return this->$password;
+			return $this->$password;
 		}
 
 		public function Getlastlogintime()
 		{
-			return this->$lastlogintime;
+			return $this->$lastlogintime;
 		}
 		
 		public function Getphoto()
 		{
-			return this->$photo;
+			return $this->$photo;
 		}
 		
 		public function GetuserStatus()
 		{
-			return this->$userStatus;
+			return $this->$userStatus;
 		}
 		
 		public function SetfirstName($firstName)
