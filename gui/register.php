@@ -1,10 +1,14 @@
 <?php
 	
-	require_once ($_SERVER["DOCUMENT_ROOT"] . "/Common_project/bl/bl_classes/departments/departmentBL.class.php");
-	require_once ($_SERVER["DOCUMENT_ROOT"] . "/Common_project/bl/bl_classes/user/registerbl.class.php");
+	require_once($_SERVER["DOCUMENT_ROOT"] . "/Common_project/bl/bl_classes/departments/departmentBL.class.php");
+	require_once($_SERVER["DOCUMENT_ROOT"] . "/Common_project/bl/bl_classes/user/yearbl.class.php");
+	require_once($_SERVER["DOCUMENT_ROOT"] . "/Common_project/bl/bl_classes/user/registerbl.class.php");
 	
 	$DepartmentBL = new DepartmentBL();
 	$departments = $DepartmentBL->GetDepartments();
+	
+	$yearBL = new yearBL();
+	$years = $yearBL->GetYears();
 	
 	if (ISSET($_POST["submit"],$_POST["username"],$_POST["password"],$_POST["confirm"],$_POST["email"],$_POST["department"]) &&  $_POST["password"] === $_POST["confirm"])
 	{
@@ -74,7 +78,7 @@
 					</div>
 					<div>
 						<select id="department" class="fields">
-							<option value="-1">Smer</option>
+							<option value="-1" selected hidden>---Smer---</option>
 							<?php
 								if (isset($departments) && $departments != null)
 								{
@@ -94,7 +98,17 @@
 					</div>
 					<div>
 						<select id="year" class="fields">
-							<option value="-1" selected>Školska godina</option>
+							<option value="-1" selected disabled hidden>---Školska godina---</option>
+							<?php
+								if (isset($years) && $years != null)
+								{
+									foreach($years as $year)
+									{
+										printf("<option value='%s'>%s</option>",
+										$year->GetyearID(),$year->Getschoolyear());
+									}
+								}
+							?>
 						</select>
 						<div id="yearError"></div>
 					</div>

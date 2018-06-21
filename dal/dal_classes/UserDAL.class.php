@@ -64,7 +64,10 @@
 				{
 					echo $resultArray["error"];
 					exit;
-					/*
+					/* da li je (opcija 2) ok za logovanje greshke ili moze i ovako(opcija 1)?
+					opcija 1:
+					error_log("$resultArray["error"]",3,"../dal/errorlog.txt");
+					opcija 2:
 					$filename = "../dal/errorlog.txt";
 					
 					function SetError($errno, $errMessage, $errFile, $errLine, $errContext)

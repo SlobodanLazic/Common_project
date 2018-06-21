@@ -17,7 +17,7 @@
 				$register = new RegisterBM();
 				$register->SetNewUser($firstName,$lastName,$email,$username,$password);
 				$userDM = $this->MapRegisterBM2userDM($register);
-				
+			
 				$registerDAL = new UserDAL();
 				$id = $registerDAL->Insert($userDM);
 				
