@@ -35,49 +35,49 @@
 						<label>Ime</label>
 					</div>
 					<div>
-						<input type="text" id="firstName" class="fields">
+						<input type="text" id="firstName" name="firstName" class="fields">
 						<div id="firstNameError"></div>
 					</div>
 					<div>
 						<label>Prezime</label>
 					</div>
 					<div>
-						<input type="text" id="lastName" class="fields">
+						<input type="text" id="lastName" name="lastName" class="fields">
 						<div id="lastNameError"></div>
 					</div>
 					<div>
 						<label>Email adresa</label>
 					</div>
 					<div>
-						<input type="email" id="email" class="fields">
+						<input type="email" id="email" name="email" class="fields">
 						<div id="emailError"></div>
 					</div>
 					<div>
 						<label>Korisničko ime</label>
 					</div>
 					<div>
-						<input type="text" id="username" class="fields">
+						<input type="text" id="username" name="username" class="fields">
 						<div id="usernameError"></div>
 					</div>
 					<div>
 						<label>Lozinka</label>
 					</div>
 					<div>
-						<input type="password" id="password" class="fields">
+						<input type="password" id="password" name="password" class="fields">
 						<div id="passwordError"></div>
 					</div>
 					<div>
 						<label>Ponovi lozinku</label>
 					</div>
 					<div>
-						<input type="password" id="confirm" class="fields">
+						<input type="password" id="confirm" name="confirm" class="fields">
 						<div id="confirmError"></div>
 					</div>
 					<div>
 						<label>Smer</label>
 					</div>
 					<div>
-						<select id="department" class="fields">
+						<select id="department" name="department" class="fields">
 							<option value="-1" selected hidden>---Smer---</option>
 							<?php
 								if (isset($departments) && $departments != null)
@@ -97,7 +97,7 @@
 						<label>Godina</label>
 					</div>
 					<div>
-						<select id="year" class="fields">
+						<select id="year" name="year" class="fields">
 							<option value="-1" selected disabled hidden>---Školska godina---</option>
 							<?php
 								if (isset($years) && $years != null)
@@ -112,8 +112,14 @@
 						</select>
 						<div id="yearError"></div>
 					</div>
+					<div>
+						<label>Fotografija</label>
+					</div>
+					<div>
+						<input type="file" id="photo" name="photo"/>
+					</div>
 					<div id="submit">
-						<input type="submit" id="submit" value="Registruj me"/>
+						<input type="submit" id="submit" name="submit" value="Registruj me"/>
 					</div>
 					<div class="register">
 						<button type="button" name="register" value="register">

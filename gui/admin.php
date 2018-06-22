@@ -18,11 +18,22 @@
 		<div id="centerform">
 			<h1>Admin</h1>
 			<form method="POST">
-				<div>
-					Ulogovan!!!
+				<div class="clearfix">
+					<div class="register">
+						<button type="add" class="links" id="add" name="add" value="dodaj"><a href="prijava.php">Dodaj</a></button>
+					</div>
 				</div>
-				<div class="register">
-					<button type="logout" class="links" id="logout" name="logout" value="Logout"><a href="logout.php">Logout</a></button>
+				<div>
+					<div class="flexbox">
+						<div class="register">
+							<button type="view" class="links" id="view" name="view" value="view"><a href="vidi.php">Vidi</a></button>	
+						</div>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="register">
+						<button type="logout" class="links" id="logout" name="logout" value="Logout"><a href="logout.php">Logout</a></button>
+					</div>
 				</div>
 			</form>
 		</div>

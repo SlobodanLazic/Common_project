@@ -14,6 +14,16 @@ body {
 	border: 5px solid #FFFFFF;
 	color: #FFFFFF;
 }
+.clearfix {
+	content: "";
+	clear: both;
+	display:table;
+}
+.flexbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 #centerform h1{
 	font-size: 22px;
 }
@@ -49,4 +59,49 @@ form {
 .register a:active {
 	color: #000000;
 	text-decoration: none;
+}
+table {
+	border-collapse: collapse;
+}
+th, td {
+	border-right: 1px dashed #FFFFFF;
+}
+td {
+	background: ;
+}
+#tablewrapper {
+	padding;
+}
+th:last-of-type,td:last-of-type
+{
+	border: 0px;
+}
+#filtration {
+	margin: 10px 0px 15px;
+}
+#checkbutton {
+	margin-top: 6px;
+}
+#avatar {
+	width: 100px;
+	height: 120px;
+	background: rgb(250, 255, 189);
+	float: left;
+	border: 1px dashed #FFF;
+}
+.avatarwrapper {
+	height: 100px;
+	width: 500px;
+	margin: 0 auto;
+	padding: 10px;
+}
+.avatar {
+	float:left;
+}
+img {
+	height: 120px;
+	width: 100px;
+}
+.info {
+	vertical-align: middle;
 }
