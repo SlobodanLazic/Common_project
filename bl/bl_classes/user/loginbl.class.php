@@ -17,11 +17,20 @@
 			{
 				$userDAL = new UserDAL();
 				$user = $userDAL->GetUser($username, $password);
-				if ($user != null && $username == "admin" && $password = "admin")
+				$userArray = (array) $user;
+		
+				if ($user != null && $username == "admin" && $password == "admin")
 				{
 					$userDAL->UpdateLastLoginTime($user->GetID_USER());
 					$this->SetUserObjectToSession($user);
 					header("Location:admin.php");
+					exit;
+				}
+				else if ($user != null && in_array($username, $userArray) && in_array($password, $userArray))
+				{
+					$userDAL->UpdateLastLoginTime($user->GetID_USER());
+					$this->SetUserObjectToSession($user);
+					header("Location:user_profile.php");
 					exit;
 				}
 				return $user;

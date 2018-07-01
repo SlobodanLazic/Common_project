@@ -6,7 +6,7 @@ $(document).ready(function(){
 		var valueofInput = $(this).val();
 		var trimmedInputValue = valueofInput.trim();
 		
-		if (trimmedInputValue != "" && trimmedInputValue.length >= 5)
+		if (trimmedInputValue != "" && trimmedInputValue.length >= 3)
 		{
 			$("#" + id + "Error").empty();
 		}

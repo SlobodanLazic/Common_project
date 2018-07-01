@@ -1,0 +1,2 @@
+[01-Jul-2018 10:26:31 UTC] PHP Notice:  Undefined variable: a in C:\wamp64\www\Common_project\gui\login.php on line 1
+[01-Jul-2018 10:29:39 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\dal\dal_classes\db_connection.php on line 62
