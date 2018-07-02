@@ -53,7 +53,7 @@
 					}
 					else
 					{
-						echo "Neispravna datoteka!!!";
+						echo "<h1 class='errorMsgs'>Neispravna datoteka!!!</h1>";
 					}
 				}
 			}
