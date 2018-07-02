@@ -1,1 +1,1 @@
-#php_value error_log C:\wamp64\www\Common_project\errorlog.txt
+php_value error_log C:\wamp64\www\Common_project\errorlog.txt

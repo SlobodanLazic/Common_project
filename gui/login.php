@@ -13,7 +13,7 @@
 		$test = $loginBL->LoginUser();
 		if ($test == null)
 		{
-			echo "<h1 style='color:red'>Greska!</h1>";
+			echo "<h1 class='errorMsgs'>Greska!</h1>";
 		}
 	}
 ?>

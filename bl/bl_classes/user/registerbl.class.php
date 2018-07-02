@@ -14,7 +14,7 @@
 			$password = trim($_POST["password"]);
 			$photo = $_FILES["photo"];
 			
-			if($firstName != "" && $lastName != "" && $email != "" && $username != "" && $password != "" )
+			if($firstName != "" && $lastName != "" && $email != "" && $username != "" && $password != "")
 			{
 				$registerBM = new RegisterBM();
 				$registerBM->SetNewUser($firstName,$lastName,$email,$username,$password);
@@ -29,8 +29,32 @@
 				}
 				else
 				{
-					header("Location:user_profile.php");
-					exit;
+					$allowedExts = array("jpg", "jpeg", "gif", "png");
+					$explodedArray = explode(".", $_FILES["photo"]["name"]);
+					$extension = end($explodedArray);
+					$allowedTypes = array("image/gif","image/gif","image/jpg","image/jpeg");
+					$imageType = $_FILES["photo"]["type"];
+					
+					if (in_array($extension, $allowedExts) && in_array($imageType,$allowedTypes) && $_FILES["photo"]["size"] <= 1024 * 1024 && $_FILES["photo"]["error"] == 0))
+					{
+						$imageFolderPath = sprintf($_SERVER["DOCUMENT_ROOT"] . "Common_project/gui/images/user/%d", $id);
+						mkdir($imageFolderPath);
+						
+						$filePath = sprintf("%s/%s", $imageFolderPath, $_FILES["photo"]["name"]);
+						move_uploaded_file($_FILES["photo"]["tmp_name"], $filePath);
+						
+						header("Location:user_profile.php");
+						exit;
+					}
+					else if($_FILES["photo"]["size"] == 0 || empty($_FILES["photo"]["tmp_name"]) || !is_uploaded_file($_FILES["photo"]["tmp_name"]))
+					{
+						header("Location:user_profile.php");
+						exit;
+					}
+					else
+					{
+						echo "Neispravna datoteka!!!";
+					}
 				}
 			}
 		}
