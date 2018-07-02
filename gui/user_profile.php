@@ -37,6 +37,11 @@
 						<input type="submit" name="apply" value="Prijavi se">
 					</div>
 				</div>
+				<div class="clearfix">
+					<div class="register">
+						<button type="logout" class="links" id="logout" name="logout" value="Logout"><a href="logout.php">Logout</a></button>
+					</div>
+				</div>
 			</form>
 		</div>
 	</body>

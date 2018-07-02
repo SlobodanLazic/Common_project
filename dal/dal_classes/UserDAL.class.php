@@ -47,8 +47,8 @@
 		public function SetUser($user)
 		{
 			$query = sprintf("
-							INSERT INTO USER (IME, PREZIME, EMAIL, USERNAME, PASSWORD)
-							VALUES ('%s', '%s', '%s', '%s', '%s')",
+							INSERT INTO USER (IME, PREZIME, EMAIL, USERNAME, PASSWORD, USER_STATUS)
+							VALUES ('%s', '%s', '%s', '%s', '%s', 1)",
 							$user->GetIME(),$user->GetPREZIME(),$user->GetEMAIL(),$user->GetUSERNAME(),$user->GetPASSWORD()
 							);
 			$resultArray = DBConn::Insert($query);
