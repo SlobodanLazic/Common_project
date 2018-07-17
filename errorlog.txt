@@ -45,3 +45,12 @@ Stack trace:
 [17-Jul-2018 20:01:05 UTC] PHP Warning:  include_once(): Failed opening 'C:dal/dal_models/userDM.class.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 3
 [17-Jul-2018 20:04:06 UTC] PHP Warning:  include_once(_SERVER['DOCUMENT_ROOT']/Common_project/dal/dal_models/userDM.class.php): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 3
 [17-Jul-2018 20:04:06 UTC] PHP Warning:  include_once(): Failed opening '_SERVER['DOCUMENT_ROOT']/Common_project/dal/dal_models/userDM.class.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 3
+[17-Jul-2018 21:59:53 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function UserDM::SetFOTO_NAZIV(), 0 passed in C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php on line 117 and exactly 1 expected in C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php:49
+Stack trace:
+#0 C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php(117): UserDM->SetFOTO_NAZIV()
+#1 C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php(40): UserDM->SetUser('1', 'admin', 'admin', 'admin@gmail.com', 'admin', 'admin', '2018-06-16 14:1...', '', '1')
+#2 C:\wamp64\www\Common_project\bl\bl_classes\user\loginbl.class.php(19): UserDAL->GetUser('admin', 'admin')
+#3 C:\wamp64\www\Common_project\gui\login.php(13): LoginBL->LoginUser()
+#4 {main}
+  thrown in C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php on line 49
+[17-Jul-2018 22:01:31 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\dal\dal_classes\db_connection.php on line 62
