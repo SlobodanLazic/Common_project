@@ -1,6 +1,6 @@
 <?php
 	include_once($_SERVER["DOCUMENT_ROOT"] . "/Common_project/dal/dal_classes/db_connection.php");
-	include_once(FILEPATH[0] . FILEPATH[1] . "dal/dal_models/userDM.class.php");
+	include_once(FILEPATH . "dal/dal_models/userDM.class.php");
 	
 
 	class UserDAL
@@ -47,7 +47,7 @@
 		public function SetUser($user)
 		{
 			$query = sprintf("
-							INSERT INTO USER (IME, PREZIME, EMAIL, USERNAME, PASSWORD, USER_STATUS)
+							INSERT INTO USER (IME, PREZIME, EMAIL, USERNAME, PASSWORD, USER_STATUS,)
 							VALUES ('%s', '%s', '%s', '%s', '%s', 1)",
 							$user->GetIME(),$user->GetPREZIME(),$user->GetEMAIL(),$user->GetUSERNAME(),$user->GetPASSWORD()
 							);

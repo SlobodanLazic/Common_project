@@ -1,3 +1,47 @@
 [01-Jul-2018 10:26:31 UTC] PHP Notice:  Undefined variable: a in C:\wamp64\www\Common_project\gui\login.php on line 1
 [01-Jul-2018 10:29:39 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\dal\dal_classes\db_connection.php on line 62
 [02-Jul-2018 20:06:50 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\dal\dal_classes\db_connection.php on line 62
+[13-Jul-2018 12:49:22 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php on line 38
+[13-Jul-2018 12:52:27 UTC] PHP Warning:  mkdir(): No such file or directory in C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php on line 41
+[13-Jul-2018 12:52:27 UTC] PHP Warning:  move_uploaded_file(C:/wamp64/wwwCommon_project/gui/images/user/5/pineapple.jpg): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php on line 44
+[13-Jul-2018 12:52:27 UTC] PHP Warning:  move_uploaded_file(): Unable to move 'C:\wamp64\tmp\phpB54B.tmp' to 'C:/wamp64/wwwCommon_project/gui/images/user/5/pineapple.jpg' in C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php on line 44
+[13-Jul-2018 13:19:10 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function RegisterBM::SetNewUser(), 5 passed in C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php on line 20 and exactly 6 expected in C:\wamp64\www\Common_project\bl\bl_models\registerBM.class.php:93
+Stack trace:
+#0 C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php(20): RegisterBM->SetNewUser('tester', 'tester', 'tester@tester.c...', 'tester', 'tester')
+#1 C:\wamp64\www\Common_project\gui\register.php(16): RegisterBL->RegisterNewUser()
+#2 {main}
+  thrown in C:\wamp64\www\Common_project\bl\bl_models\registerBM.class.php on line 93
+[13-Jul-2018 13:19:38 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function UserDM::SetFOTO_NAZIV(), 0 passed in C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php on line 117 and exactly 1 expected in C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php:49
+Stack trace:
+#0 C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php(117): UserDM->SetFOTO_NAZIV()
+#1 C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php(70): UserDM->SetUser('tester', 'tester', 'tester@tester.c...', 'tester', 'tester', NULL)
+#2 C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php(21): RegisterBL->MapRegisterBM2userDM(Object(RegisterBM))
+#3 C:\wamp64\www\Common_project\gui\register.php(16): RegisterBL->RegisterNewUser()
+#4 {main}
+  thrown in C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php on line 49
+[13-Jul-2018 13:20:20 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function UserDM::SetFOTO_NAZIV(), 0 passed in C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php on line 117 and exactly 1 expected in C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php:49
+Stack trace:
+#0 C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php(117): UserDM->SetFOTO_NAZIV()
+#1 C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php(70): UserDM->SetUser('tester', 'tester', 'tester@tester.c...', 'tester', 'tester', NULL)
+#2 C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php(21): RegisterBL->MapRegisterBM2userDM(Object(RegisterBM))
+#3 C:\wamp64\www\Common_project\gui\register.php(16): RegisterBL->RegisterNewUser()
+#4 {main}
+  thrown in C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php on line 49
+[13-Jul-2018 13:23:15 UTC] PHP Warning:  mkdir(): No such file or directory in C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php on line 41
+[13-Jul-2018 13:23:15 UTC] PHP Warning:  move_uploaded_file(C:/wamp64/wwwCommon_project/gui/images/user/6/pineapple.jpg): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php on line 44
+[13-Jul-2018 13:23:15 UTC] PHP Warning:  move_uploaded_file(): Unable to move 'C:\wamp64\tmp\phpE89F.tmp' to 'C:/wamp64/wwwCommon_project/gui/images/user/6/pineapple.jpg' in C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php on line 44
+[13-Jul-2018 13:24:39 UTC] PHP Warning:  mkdir(): No such file or directory in C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php on line 41
+[13-Jul-2018 13:24:39 UTC] PHP Warning:  move_uploaded_file(C:/wamp64/wwwCommon_project/gui/images/user/7/pineapple.jpg): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php on line 44
+[13-Jul-2018 13:24:39 UTC] PHP Warning:  move_uploaded_file(): Unable to move 'C:\wamp64\tmp\php31A1.tmp' to 'C:/wamp64/wwwCommon_project/gui/images/user/7/pineapple.jpg' in C:\wamp64\www\Common_project\bl\bl_classes\user\registerbl.class.php on line 44
+[17-Jul-2018 19:58:30 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\wamp64\www\Common_project\dal\util.php on line 6
+[17-Jul-2018 19:58:57 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\wamp64\www\Common_project\dal\util.php on line 6
+[17-Jul-2018 19:58:58 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\wamp64\www\Common_project\dal\util.php on line 6
+[17-Jul-2018 19:59:24 UTC] PHP Warning:  include_once(C:dal/dal_models/userDM.class.php): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 3
+[17-Jul-2018 19:59:24 UTC] PHP Warning:  include_once(): Failed opening 'C:dal/dal_models/userDM.class.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 3
+[17-Jul-2018 19:59:24 UTC] PHP Warning:  include_once(C:dal/dal_models/userDM.class.php): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 3
+[17-Jul-2018 19:59:24 UTC] PHP Warning:  include_once(): Failed opening 'C:dal/dal_models/userDM.class.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 3
+[17-Jul-2018 20:00:41 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in C:\wamp64\www\Common_project\dal\util.php on line 6
+[17-Jul-2018 20:01:05 UTC] PHP Warning:  include_once(C:dal/dal_models/userDM.class.php): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 3
+[17-Jul-2018 20:01:05 UTC] PHP Warning:  include_once(): Failed opening 'C:dal/dal_models/userDM.class.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 3
+[17-Jul-2018 20:04:06 UTC] PHP Warning:  include_once(_SERVER['DOCUMENT_ROOT']/Common_project/dal/dal_models/userDM.class.php): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 3
+[17-Jul-2018 20:04:06 UTC] PHP Warning:  include_once(): Failed opening '_SERVER['DOCUMENT_ROOT']/Common_project/dal/dal_models/userDM.class.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 3

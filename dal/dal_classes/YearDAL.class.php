@@ -1,6 +1,6 @@
 <?php
 	include_once($_SERVER["DOCUMENT_ROOT"] . "/Common_project/dal/dal_classes/db_connection.php");
-	include_once(FILEPATH[0] . FILEPATH[1] . "dal/dal_models/yearDM.class.php");
+	include_once(FILEPATH . "dal/dal_models/yearDM.class.php");
 	
 	class YearDAL
 	{

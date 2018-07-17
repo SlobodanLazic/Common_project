@@ -90,13 +90,16 @@
 			$this->userStatus = $userStatus;
 		}		
 		
-		public function SetNewUser($firstName, $lastName, $email, $username, $password)
+		public function SetNewUser($firstName, $lastName, $email, $username, $password, $photo)
 		{
 			$this->firstName = $firstName;
 			$this->lastName = $lastName;
 			$this->email = $email;
 			$this->username = $username; 
 			$this->password = $password;
+			/*kako da obradim fotografiju ako nije uneta buduci da je opcionalno unoshenje fotografije?
+			Da li je moguce sa presetovanim praznim stringom za promenljivu photo?(buduci da je niz)*/
+			count($photo, COUNT_RECURSIVE) != 0 ? $this->photo = $photo : $photo = "";
 		}
 		
 	}

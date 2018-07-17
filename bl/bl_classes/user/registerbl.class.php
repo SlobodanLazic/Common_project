@@ -17,7 +17,7 @@
 			if($firstName != "" && $lastName != "" && $email != "" && $username != "" && $password != "")
 			{
 				$registerBM = new RegisterBM();
-				$registerBM->SetNewUser($firstName,$lastName,$email,$username,$password);
+				$registerBM->SetNewUser($firstName,$lastName,$email,$username,$password,$photo);
 				$userDM = $this->MapRegisterBM2userDM($registerBM);
 			
 				$userDAL = new UserDAL();
@@ -29,13 +29,14 @@
 				}
 				else
 				{
+					//this should be separated into a different function yes or no?
 					$allowedExts = array("jpg", "jpeg", "gif", "png");
 					$explodedArray = explode(".", $_FILES["photo"]["name"]);
 					$extension = end($explodedArray);
 					$allowedTypes = array("image/gif","image/gif","image/jpg","image/jpeg");
 					$imageType = $_FILES["photo"]["type"];
 					
-					if (in_array($extension, $allowedExts) && in_array($imageType,$allowedTypes) && $_FILES["photo"]["size"] <= 1024 * 1024 && $_FILES["photo"]["error"] == 0))
+					if (in_array($extension, $allowedExts) && in_array($imageType,$allowedTypes) && $_FILES["photo"]["size"] <= 1024 * 1024 && $_FILES["photo"]["error"] == 0)
 					{
 						$imageFolderPath = sprintf($_SERVER["DOCUMENT_ROOT"] . "Common_project/gui/images/user/%d", $id);
 						mkdir($imageFolderPath);
@@ -66,7 +67,8 @@
 		                        $registerBM->GetlastName(),
 		                        $registerBM->Getemail(),
 		                        $registerBM->Getusername(),
-		                        $registerBM->Getpassword()
+		                        $registerBM->Getpassword(),
+								$registerBM->Getphoto()
 								);
 			return	$userDM;				
 		}

@@ -105,7 +105,8 @@
 		                        $PREZIME,
 		                        $EMAIL,
 		                        $USERNAME,
-		                        $PASSWORD
+		                        $PASSWORD,
+								$FOTO_NAZIV
 		)
 		{
 			$this->SetIME($IME);
@@ -113,6 +114,7 @@
 			$this->SetEMAIL($EMAIL);
 			$this->SetUSERNAME($USERNAME);
 			$this->SetPASSWORD($PASSWORD);
+			$FOTO_NAZIV != "" ? $this->SetFOTO_NAZIV() : $FOTO_NAZIV = "";
 		}
 	}
 ?>
