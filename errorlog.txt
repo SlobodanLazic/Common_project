@@ -54,3 +54,27 @@ Stack trace:
 #4 {main}
   thrown in C:\wamp64\www\Common_project\dal\dal_models\userDM.class.php on line 49
 [17-Jul-2018 22:01:31 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\dal\dal_classes\db_connection.php on line 62
+[17-Jul-2018 22:59:12 UTC] PHP Parse error:  syntax error, unexpected '$query' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST) in C:\wamp64\www\Common_project\dal\dal_classes\ProjectsDAL.class.php on line 7
+[18-Jul-2018 00:21:23 UTC] PHP Warning:  include_once(C:/wamp64/wwwdal/dal_classes/db_connection.php): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\dal\dal_classes\ProjectsDAL.class.php on line 2
+[18-Jul-2018 00:21:23 UTC] PHP Warning:  include_once(): Failed opening 'C:/wamp64/wwwdal/dal_classes/db_connection.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\dal\dal_classes\ProjectsDAL.class.php on line 2
+[18-Jul-2018 00:21:23 UTC] PHP Notice:  Use of undefined constant FILEPATH - assumed 'FILEPATH' in C:\wamp64\www\Common_project\dal\dal_classes\ProjectsDAL.class.php on line 3
+[18-Jul-2018 00:21:23 UTC] PHP Warning:  include_once(FILEPATHdal/dal_models/projectsDM.class.php): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\dal\dal_classes\ProjectsDAL.class.php on line 3
+[18-Jul-2018 00:21:23 UTC] PHP Warning:  include_once(): Failed opening 'FILEPATHdal/dal_models/projectsDM.class.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\dal\dal_classes\ProjectsDAL.class.php on line 3
+[18-Jul-2018 00:24:48 UTC] PHP Parse error:  syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$' in C:\wamp64\www\Common_project\bl\bl_classes\projects\projectsBL.class.php on line 11
+[18-Jul-2018 01:13:50 UTC] PHP Warning:  include_once(C:/wamp64/www/Common_project/dal/bl_models/projectsBM.php): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\bl\bl_classes\projects\projectsBL.class.php on line 4
+[18-Jul-2018 01:13:50 UTC] PHP Warning:  include_once(): Failed opening 'C:/wamp64/www/Common_project/dal/bl_models/projectsBM.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\bl\bl_classes\projects\projectsBL.class.php on line 4
+[18-Jul-2018 01:14:31 UTC] PHP Warning:  include_once(C:/wamp64/www/Common_project/bl/bl_models/projectsBM.php): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\bl\bl_classes\projects\projectsBL.class.php on line 4
+[18-Jul-2018 01:14:31 UTC] PHP Warning:  include_once(): Failed opening 'C:/wamp64/www/Common_project/bl/bl_models/projectsBM.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\bl\bl_classes\projects\projectsBL.class.php on line 4
+[18-Jul-2018 01:22:14 UTC] PHP Warning:  include_once(C:/wamp64/www/Common_project/bl/projectsBL.class.php): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\gui\vidi.php on line 2
+[18-Jul-2018 01:22:14 UTC] PHP Warning:  include_once(): Failed opening 'C:/wamp64/www/Common_project/bl/projectsBL.class.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\gui\vidi.php on line 2
+[18-Jul-2018 01:22:14 UTC] PHP Fatal error:  Uncaught Error: Class 'ProjectBL' not found in C:\wamp64\www\Common_project\gui\vidi.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\wamp64\www\Common_project\gui\vidi.php on line 4
+[18-Jul-2018 01:22:59 UTC] PHP Warning:  include_once(C:/wamp64/www/Common_project/bl/bl_classes/projectsBL.class.php): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\gui\vidi.php on line 2
+[18-Jul-2018 01:22:59 UTC] PHP Warning:  include_once(): Failed opening 'C:/wamp64/www/Common_project/bl/bl_classes/projectsBL.class.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\gui\vidi.php on line 2
+[18-Jul-2018 01:22:59 UTC] PHP Fatal error:  Uncaught Error: Class 'ProjectBL' not found in C:\wamp64\www\Common_project\gui\vidi.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\wamp64\www\Common_project\gui\vidi.php on line 4
+[18-Jul-2018 01:29:50 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in C:\wamp64\www\Common_project\gui\vidi.php on line 46

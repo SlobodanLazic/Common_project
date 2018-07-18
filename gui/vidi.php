@@ -1,3 +1,10 @@
+<?php
+	include_once($_SERVER["DOCUMENT_ROOT"] . "/Common_project/bl/bl_classes/projects/projectsBL.class.php");
+	
+	$ProjectBL = new ProjectBL();
+	$projects = $ProjectBL->GetProjects();
+	var_dump($projects);
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -36,14 +43,15 @@
 											 ";
 											break;
 									default:
-										echo "<td>a</td>
+										printf( "<td>%s</td>
 											  <td>a</td>
 											  <td>a</td>
 											  <td>a</td>
 											  <td><i class='fas fa-check'></i>
 												  <i class='fas fa-times'></i>
 											  </td>
-											  ";
+											  ",$projects
+											  );
 										  break;
 								}
 							
