@@ -12,7 +12,6 @@
 			$email = trim($_POST["email"]);
 			$username = trim($_POST["username"]);
 			$password = trim($_POST["password"]);
-			$photo = $_FILES["photo"];
 			
 			if($firstName != "" && $lastName != "" && $email != "" && $username != "" && $password != "")
 			{
@@ -29,14 +28,24 @@
 				}
 				else
 				{
-					//this should be separated into a different function yes or no?
+					
+					$this->ValidateNewUsersPicture();
+					
+				}
+			}
+		}
+		
+		private function ValidateNewUsersPicture() //this function deals with validation of user picture
+		{
+					$photo = $_FILES["photo"];
 					$allowedExts = array("jpg", "jpeg", "gif", "png");
 					$explodedArray = explode(".", $_FILES["photo"]["name"]);
 					$extension = end($explodedArray);
 					$allowedTypes = array("image/gif","image/gif","image/jpg","image/jpeg");
 					$imageType = $_FILES["photo"]["type"];
 					
-					if (in_array($extension, $allowedExts) && in_array($imageType,$allowedTypes) && $_FILES["photo"]["size"] <= 1024 * 1024 && $_FILES["photo"]["error"] == 0)
+					if (in_array($extension, $allowedExts) && in_array($imageType,$allowedTypes)
+						&& $_FILES["photo"]["size"] <= 1024 * 1024 && $_FILES["photo"]["error"] == 0)
 					{
 						$imageFolderPath = sprintf($_SERVER["DOCUMENT_ROOT"] . "Common_project/gui/images/user/%d", $id);
 						mkdir($imageFolderPath);
@@ -56,8 +65,6 @@
 					{
 						echo "<h1 class='errorMsgs'>Neispravna datoteka!!!</h1>";
 					}
-				}
-			}
 		}
 		
 		private function MapRegisterBM2userDM($registerBM)

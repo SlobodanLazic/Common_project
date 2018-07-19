@@ -52,7 +52,7 @@
 							$user->GetIME(),$user->GetPREZIME(),$user->GetEMAIL(),$user->GetUSERNAME(),$user->GetPASSWORD()
 							);
 			$resultArray = DBConn::Insert($query);
-			
+			var_dump($resultArray);
 			$id = -1;
 			if (ISSET($resultArray) && $resultArray != null)
 			{
@@ -62,28 +62,9 @@
 				}
 				else if (count($resultArray) == 2)
 				{
-					echo $resultArray["error"];
-					exit;
-					/* da li je (opcija 2) ok za logovanje greshke ili moze i ovako(opcija 1)?
-					opcija 1:
-					error_log("$resultArray["error"]",3,"../dal/errorlog.txt");
-					opcija 2:
-					$filename = "../dal/errorlog.txt";
-					
-					function SetError($errno, $errMessage, $errFile, $errLine, $errContext)
-					{
-						$handle = fopen($filename, "a+");
-						echo $resultArray["error"];
-						if ($handle !== false)
-						{
-							@$written = fwrite($handle, "Error number:$errno, ErrorMessage: $errMessage, ErrorFile: $errFile, ErrorLine:$errLine, ErrorFile:$errContext");
-							if(file_exists($filename))
-							{
-								fclose($handle);
-							}
-						}						
-					}
-					set_error_handler("SetError");*/
+					$errorMsg = $resultArray["error"];
+					$errorLogFilePath = $_SERVER["DOCUMENT_ROOT"] . "/errorlog.txt";
+					error_log($errorMsg,3,$errorLogFilePath);
 				}
 			}
 			

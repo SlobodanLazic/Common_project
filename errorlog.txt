@@ -78,3 +78,53 @@ Stack trace:
 #0 {main}
   thrown in C:\wamp64\www\Common_project\gui\vidi.php on line 4
 [18-Jul-2018 01:29:50 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in C:\wamp64\www\Common_project\gui\vidi.php on line 46
+[18-Jul-2018 11:50:19 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\dal\dal_classes\db_connection.php on line 62
+[18-Jul-2018 12:06:21 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\dal\dal_classes\db_connection.php on line 62
+[18-Jul-2018 12:06:24 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\wamp64\www\Common_project\gui\prijava.php on line 8
+[18-Jul-2018 12:07:55 UTC] PHP Fatal error:  Cannot use [] for reading in C:\wamp64\www\Common_project\gui\prijava.php on line 8
+[18-Jul-2018 12:08:11 UTC] PHP Fatal error:  Cannot use [] for reading in C:\wamp64\www\Common_project\gui\prijava.php on line 8
+[18-Jul-2018 12:08:12 UTC] PHP Fatal error:  Cannot use [] for reading in C:\wamp64\www\Common_project\gui\prijava.php on line 8
+[18-Jul-2018 12:08:12 UTC] PHP Fatal error:  Cannot use [] for reading in C:\wamp64\www\Common_project\gui\prijava.php on line 8
+[18-Jul-2018 12:08:19 UTC] PHP Warning:  include_once(C:/wamp64/www/Common_project/bl/bl_classes/projects/projectBL.class.php): failed to open stream: No such file or directory in C:\wamp64\www\Common_project\gui\prijava.php on line 3
+[18-Jul-2018 12:08:19 UTC] PHP Warning:  include_once(): Failed opening 'C:/wamp64/www/Common_project/bl/bl_classes/projects/projectBL.class.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\Common_project\gui\prijava.php on line 3
+[18-Jul-2018 12:26:49 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\wamp64\www\Common_project\bl\bl_classes\projects\projectsBL.class.php on line 48
+[18-Jul-2018 12:33:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function GetDEPARTMENT_NAME() on array in C:\wamp64\www\Common_project\gui\prijava.php:7
+Stack trace:
+#0 {main}
+  thrown in C:\wamp64\www\Common_project\gui\prijava.php on line 7
+[18-Jul-2018 12:34:12 UTC] PHP Notice:  Undefined variable: department in C:\wamp64\www\Common_project\gui\prijava.php on line 7
+[18-Jul-2018 12:34:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function GetDEPARTMENT_NAME() on null in C:\wamp64\www\Common_project\gui\prijava.php:7
+Stack trace:
+#0 {main}
+  thrown in C:\wamp64\www\Common_project\gui\prijava.php on line 7
+[18-Jul-2018 12:36:25 UTC] PHP Notice:  Undefined variable: department in C:\wamp64\www\Common_project\gui\prijava.php on line 7
+[18-Jul-2018 12:36:25 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\gui\prijava.php on line 7
+[18-Jul-2018 12:36:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function GetDEPARTMENT_NAME() on null in C:\wamp64\www\Common_project\gui\prijava.php:7
+Stack trace:
+#0 {main}
+  thrown in C:\wamp64\www\Common_project\gui\prijava.php on line 7
+[18-Jul-2018 12:39:28 UTC] PHP Notice:  Undefined variable: POST in C:\wamp64\www\Common_project\gui\prijava.php on line 7
+[19-Jul-2018 08:31:01 UTC] PHP Parse error:  syntax error, unexpected '"', expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 66
+[19-Jul-2018 08:31:26 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in C:\wamp64\www\Common_project\dal\dal_classes\UserDAL.class.php on line 66
+[19-Jul-2018 09:05:38 UTC] PHP Notice:  Undefined index: departments in C:\wamp64\www\Common_project\gui\prijava.php on line 7
+[19-Jul-2018 09:06:57 UTC] PHP Notice:  Undefined index: departments in C:\wamp64\www\Common_project\gui\prijava.php on line 13
+[19-Jul-2018 09:06:58 UTC] PHP Notice:  Undefined index: departments in C:\wamp64\www\Common_project\gui\prijava.php on line 13
+[19-Jul-2018 09:06:58 UTC] PHP Notice:  Undefined index: departments in C:\wamp64\www\Common_project\gui\prijava.php on line 13
+[19-Jul-2018 09:06:58 UTC] PHP Notice:  Undefined index: departments in C:\wamp64\www\Common_project\gui\prijava.php on line 13
+[19-Jul-2018 09:06:58 UTC] PHP Notice:  Undefined index: departments in C:\wamp64\www\Common_project\gui\prijava.php on line 13
+[19-Jul-2018 09:07:17 UTC] PHP Notice:  Undefined index: departments in C:\wamp64\www\Common_project\gui\prijava.php on line 41
+[19-Jul-2018 09:21:43 UTC] PHP Notice:  Undefined index: department in C:\wamp64\www\Common_project\gui\prijava.php on line 13
+[19-Jul-2018 09:29:37 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\wamp64\www\Common_project\gui\prijava.php on line 8
+[19-Jul-2018 09:31:27 UTC] PHP Notice:  Undefined index: department in C:\wamp64\www\Common_project\bl\bl_classes\projects\projectsBL.class.php on line 42
+[19-Jul-2018 10:57:40 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\gui\vidi.php on line 53
+[19-Jul-2018 10:57:40 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\gui\vidi.php on line 53
+[19-Jul-2018 10:57:40 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\gui\vidi.php on line 53
+[19-Jul-2018 10:57:40 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\gui\vidi.php on line 53
+[19-Jul-2018 10:57:40 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\gui\vidi.php on line 53
+[19-Jul-2018 10:57:40 UTC] PHP Notice:  Trying to get property of non-object in C:\wamp64\www\Common_project\gui\vidi.php on line 53
+[19-Jul-2018 11:28:16 UTC] PHP Notice:  Undefined property: ProjectBL::$GetSTATUS_NAME in C:\wamp64\www\Common_project\gui\vidi.php on line 53
+[19-Jul-2018 11:28:16 UTC] PHP Notice:  Undefined property: ProjectBL::$GetSTATUS_NAME in C:\wamp64\www\Common_project\gui\vidi.php on line 53
+[19-Jul-2018 11:28:16 UTC] PHP Notice:  Undefined property: ProjectBL::$GetSTATUS_NAME in C:\wamp64\www\Common_project\gui\vidi.php on line 53
+[19-Jul-2018 11:33:48 UTC] PHP Parse error:  syntax error, unexpected ')', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in C:\wamp64\www\Common_project\gui\vidi.php on line 54
+[19-Jul-2018 11:40:38 UTC] PHP Parse error:  syntax error, unexpected ')', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in C:\wamp64\www\Common_project\gui\vidi.php on line 54
+[19-Jul-2018 11:40:38 UTC] PHP Parse error:  syntax error, unexpected ')', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in C:\wamp64\www\Common_project\gui\vidi.php on line 54

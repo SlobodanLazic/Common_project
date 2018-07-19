@@ -1,8 +1,16 @@
 <?php
 	include_once($_SERVER["DOCUMENT_ROOT"] . "/Common_project/bl/bl_classes/departments/departmentBL.class.php");
+	include_once($_SERVER["DOCUMENT_ROOT"] . "/Common_project/bl/bl_classes/projects/projectsBL.class.php");
 	
 	$DepartmentBL = new DepartmentBL;
 	$departments = $DepartmentBL->GetDepartments();
+	
+	if(ISSET($_POST["projectname"]) && $_POST["departments"] != "-1")
+	{	
+		$insertProjectBL = new projectBL();
+		$insertProjectBL->SetProjects();
+	}
+
 ?>
 <!DOCTYPE html>
 <html>

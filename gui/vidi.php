@@ -3,7 +3,6 @@
 	
 	$ProjectBL = new ProjectBL();
 	$projects = $ProjectBL->GetProjects();
-	var_dump($projects);
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +28,7 @@
 				</div>
 				<div class="clearfix">
 					<?php	
-						echo "<table>";
+						print "<table>";
 						for($i=1;$i<=4;$i++){
 							echo "<tr>";
 								switch($i)
@@ -43,21 +42,21 @@
 											 ";
 											break;
 									default:
-										printf( "<td>%s</td>
+										printf( "<td>a</td>
 											  <td>a</td>
 											  <td>a</td>
-											  <td>a</td>
+											  <td>%s</td>
 											  <td><i class='fas fa-check'></i>
 												  <i class='fas fa-times'></i>
 											  </td>
-											  ",$projects
+											  ",$projects["STATUS_NAME"]
 											  );
 										  break;
 								}
 							
 							echo "</tr>";
 						}
-						echo "</table>";
+						print "</table>";
 					?>
 				</div>
 				<div class="clearfix">

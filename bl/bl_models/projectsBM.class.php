@@ -7,6 +7,9 @@
 		private $TO_DATE;
 		private $ID_DEPARTMENT;
 		private $DEPARTMENT_NAME;
+		private $ID_STATUS;		
+		private $STATUS_NAME;
+		private $STATUS_DESCRIPTION;
 		
 		public function SetID_CHECK_IN($ID_CHECK_IN)
 		{
@@ -36,6 +39,21 @@
 		public function SetDEPARTMENT_NAME($DEPARTMENT_NAME)
 		{
 			$this->DEPARTMENT_NAME = $DEPARTMENT_NAME;
+		}
+		
+		public function SetID_STATUS($ID_STATUS)
+		{
+			$this->ID_STATUS = $ID_STATUS;
+		}
+		
+		public function SetSTATUS_NAME($STATUS_NAME)
+		{
+			$this->STATUS_NAME = $STATUS_NAME;
+		}
+		
+		public function SetSTATUS_DESCRIPTION($STATUS_DESCRIPTION)
+		{
+			$this->STATUS_DESCRIPTION = $STATUS_DESCRIPTION;
 		}
 		
 		public function GetID_CHECK_IN()
@@ -68,12 +86,30 @@
 			return $this->DEPARTMENT_NAME;
 		}
 		
+		public function GetID_STATUS()
+		{
+			return $this->ID_STATUS;
+		}
+		
+		public function GetSTATUS_NAME()
+		{
+			return $this->STATUS_NAME;
+		}
+		
+		public function GetSTATUS_DESCRIPTION()
+		{
+			return $this->STATUS_DESCRIPTION;
+		}
+		
 		public function SetProjects( $ID_CHECK_IN,
 		                             $NAME_CHECK_IN,
 		                             $FROM_DATE,
 		                             $TO_DATE,
 		                             $ID_DEPARTMENT,
-		                             $DEPARTMENT_NAME
+		                             $DEPARTMENT_NAME,
+									 $ID_STATUS,
+									 $STATUS_NAME,
+									 $STATUS_DESCRIPTION
 								   )
 		{
 			$this->ID_CHECK_IN = $ID_CHECK_IN;
@@ -82,6 +118,9 @@
 			$this->TO_DATE = $TO_DATE;
 			$this->ID_DEPARTMENT = $ID_DEPARTMENT;
 			$this->DEPARTMENT_NAME = $DEPARTMENT_NAME;
+			$this->ID_STATUS = $ID_STATUS;
+			$this->STATUS_NAME = $STATUS_NAME;
+			$this->STATUS_DESCRIPTION = $STATUS_DESCRIPTION;
 		}
 	}
 ?>
